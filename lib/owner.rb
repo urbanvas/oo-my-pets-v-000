@@ -59,9 +59,11 @@ class Owner
  end
 
  def sell_pets
-   pets.each {|key, value| value.each {|inner| inner.mood = "nervous"}}
-   self.pets.each {|k, v| v.clear }
- end
+    @pets.each do |type, pets|
+      pets.each{|pet| pet.mood = "nervous"}
+      pets.clear
+    end
+  end
 
  def list_pets
    "I have #{@@hash[:fishes].size} fish, #{@@hash[:dogs].size} dog(s), and #{@@hash[:cats].size} cat(s)."
