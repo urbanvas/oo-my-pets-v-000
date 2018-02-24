@@ -64,7 +64,7 @@ class Owner
  end
 
  def list_pets
-   "I have #{@pets[:fishes].size} fish, #{@pets[:dogs].size} dog(s), and #{@pets[:cats].size} cat(s)."
+   "I have #{@@hash[:fishes].size} fish, #{@@hash[:dogs].size} dog(s), and #{@@hash[:cats].size} cat(s)."
  end
 
 
